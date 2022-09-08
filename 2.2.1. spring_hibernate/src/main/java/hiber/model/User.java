@@ -16,6 +16,10 @@ public class User {
    @Column(name = "last_name")
    private String lastName;
 
+   @OneToOne(cascade = CascadeType.ALL)
+   @JoinColumn(name = "car", referencedColumnName = "series")
+   private Car car;
+
    @Column(name = "email")
    private String email;
 
